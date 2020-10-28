@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta http-equiv="Content-type" content="text/html" charset="utf-8">
+
+    <script type="text/javascript" charset="utf-8">
+      function pageLoaded() {
+
+        // get a handle to the canvas context
+        var canvas = document.getElementById("the_canvas");
+
+        // get 2D context for this canvas
+        var context = canvas.getContext("2d");
+
+        context.fillStyle = "red";
+
+        // get image element
+        var house = document.getElementById("houseDrawing");
+        var cat = document.getElementById("cat");
+
+        context.drawImage(house, 0, 0);
+
+        context.scale(0.15, 0.15);
+
+        context.translate(180, 60);
+
+        context.drawImage(cat, 900, 1300);
+
+        context.rotate(Math.PI / 6)
+
+        context.drawImage(cat, 2000, 2000);
+
+        context.scale(4, 4);
+
+        context.rotate(-Math.PI / 6);
+
+        context.drawImage(cat, 10, 500, 100, 56);
+        
+        
+
+      }
+
+    </script>
+  </head>
+
+  <body onload="pageLoaded()">
+    <canvas id="the_canvas" width="800" height="600" style="border: black 1px solid;">
+      Oops! looks like your browser does not support canvas tag
+    </canvas>
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5eec622a-0091-48c5-bba9-e5d03e3e0fe5/dcmlrme-63405ae6-e7c2-406f-8661-61f02113e931.png/v1/fill/w_1024,h_576,q_80,strp/anime_house_interior_by_anasofoz_dcmlrme-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD01NzYiLCJwYXRoIjoiXC9mXC81ZWVjNjIyYS0wMDkxLTQ4YzUtYmJhOS1lNWQwM2UzZTBmZTVcL2RjbWxybWUtNjM0MDVhZTYtZTdjMi00MDZmLTg2NjEtNjFmMDIxMTNlOTMxLnBuZyIsIndpZHRoIjoiPD0xMDI0In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.7v4WzJEmkin1Kw_x5j-kLmm8Q81eHVGu_WxzdwQvDxc" id="houseDrawing" style="display: none;">
+    <img src="https://www.vhv.rs/dpng/d/533-5330805_aions-cat-form-black-and-white-anime-cat.png" id="cat" style="display: none;">
+
+    <iframe autoplay style="display: none;" src="https://www.youtube.com/embed/6A37h5XvI-c?rel=0&autoplay=1">
+
+    </iframe>
+
+  </body>
+
+</html>
